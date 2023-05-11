@@ -6,36 +6,47 @@ body {
     background-color: rgb(51, 50, 51);
     font-family: 'Open Sans', sans-serif;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
   }
 
   h1{
     text-align: center;
-    margin-top: 96px;
+    margin-top: 72px;
   }
 
 .content{
-    height: 100vh;
     width: 100%;
     display: flex;
-    margin-top: 96pxgi;
+    margin-top: 72px;
     justify-content: center;
+    position: relative;
 }
 
 table {
-    border-collapse: collapse;
-    /* border: 5px solid white; */
-    width: 200px;
-    height: 200px;
+    border-collapse: collapse;}
+
+tr{
+    height: 100px;
+    width: 100px
 }
 
 td {
     border: 5px solid white;
     padding: 10px;
-    width: 33.33%;
-    height: 33.33%;
+    width: 100px;
+    height: 100px;
     text-align: center;
     vertical-align: middle;
     font-size: 24px;
+}
+
+td:hover{
+    background: rgba(255, 255, 255, .3);
+    cursor: pointer;
 }
 
 table tr:first-child td {
@@ -49,5 +60,19 @@ table tr:first-child td {
   }
   table tr td:last-child {
     border-right: 0;
+  }
+
+  button{
+    margin-top: 48px;
+    padding: 16px 32px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(203, 200, 203);
+    color: rgb(51, 50, 51);
+  }
+
+  button:hover{
+    opacity: .8;
+    cursor: pointer;
   }
 
