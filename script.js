@@ -12,6 +12,7 @@ let currentPlayer = 'circle';
  function init(){
     render();
  }
+ 
 
  function render() {
     let tableHTML = '<table>';
@@ -38,6 +39,7 @@ let currentPlayer = 'circle';
 
     document.getElementById('content').innerHTML = tableHTML;
 }
+
 
 function generateCircleSVG() {
     const outerColor = 'rgb(28, 175, 213)';
@@ -84,9 +86,11 @@ function handleClick(cell, index) {
     }
   }
 
+
 function isGameFinished() {
     return fields.every((field) => field !== null) || getWinningCombination() !== null;
 }
+
 
 function getWinningCombination() {
     for (let i = 0; i < WINNING_COMBINATIONS.length; i++) {
@@ -150,6 +154,7 @@ function getWinningCombination() {
     line.style.transformOrigin = `top left`;
     document.getElementById('content').appendChild(line);
 }
+
 
 function restartGame(){
     fields = [ null, null, null, null, null, null, null, null, null];
